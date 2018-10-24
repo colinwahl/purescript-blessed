@@ -16,9 +16,17 @@ foreign import data Box :: Type
 
 foreign import box :: Effect Box
 
--- Utilities
+-- Type classes
 
-foreign import append :: Screen -> Box -> Effect Unit
+class Renderable a where
+  append :: Screen -> a -> Effect Unit
+
+instance renderableBox :: Renderable Box where
+  append = appendBox
+
+-- JS utilities
+
+foreign import appendBox :: Screen -> Box -> Effect Unit
 
 foreign import title :: Screen -> String -> Effect Unit
 
