@@ -1,10 +1,14 @@
 module Main where
 
-import Prelude
+import Prelude (Unit, bind, discard)
 
+import Blessed (append, box, render, screen, title)
 import Effect (Effect)
-import Effect.Console (log)
 
 main :: Effect Unit
 main = do
-  log "Initializing project!"
+  s <- screen
+  b <- box
+  append s b
+  title s "First attempt"
+  render s
