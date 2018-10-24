@@ -61,7 +61,7 @@ var exitKeys = function(screen) {
 }
 
 exports.screen = screen;
-exports.append = append;
+exports.appendBox = append;
 exports.box = box;
 exports.title = title;
 exports.render = render;
