@@ -1,9 +1,10 @@
 {
   "dependencies": {
     "blessed": "^0.1.81",
+    "psa": "^1.0.0",
     "purescript-psa": "^0.7.3"
   },
   "scripts": {
-    "build": "psa src/**/*.purs bower_components/**/*.purs"
+    "build": "psa src/**/*.purs bower_components/**/*.purs",
   }
 }
