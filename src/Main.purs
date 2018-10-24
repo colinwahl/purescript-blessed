@@ -1,9 +1,8 @@
 module Main where
 
-import Prelude (Unit, bind, discard)
-
-import Blessed (append, box, render, screen, title)
+import Blessed (append, box, exitKeys, render, screen, title)
 import Effect (Effect)
+import Prelude (Unit, bind, discard)
 
 main :: Effect Unit
 main = do
@@ -11,4 +10,5 @@ main = do
   b <- box
   append s b
   title s "First attempt"
+  exitKeys s [ "escape", "q", "C-c" ]
   render s

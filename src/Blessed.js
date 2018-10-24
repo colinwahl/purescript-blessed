@@ -50,8 +50,19 @@ var render = function(screen) {
   }
 }
 
+var exitKeys = function(screen) {
+  return function(keys) {
+    return function() {
+      screen.key(keys, function(ch, key) {
+        return process.exit(0);
+      });
+    }
+  }
+}
+
 exports.screen = screen;
 exports.append = append;
 exports.box = box;
 exports.title = title;
 exports.render = render;
+exports.exitKeys = exitKeys;

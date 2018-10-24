@@ -23,3 +23,5 @@ foreign import append :: Screen -> Box -> Effect Unit
 foreign import title :: Screen -> String -> Effect Unit
 
 foreign import render :: Screen -> Effect Unit
+
+foreign import exitKeys :: Screen -> Array String -> Effect Unit
